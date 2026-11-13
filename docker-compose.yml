@@ -2,7 +2,6 @@
 services:
   app:
     build: .
-    container_name: biblioteca_app
     ports:
       - "8080:80"
     volumes:
@@ -17,7 +16,6 @@ services:
 
   db:
     image: mysql:8.0
-    container_name: biblioteca_db
     restart: always
     environment:
       MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
@@ -35,7 +33,6 @@ services:
 
   phpmyadmin:
     image: phpmyadmin:5
-    container_name: biblioteca_phpmyadmin
     ports:
       - "8081:80"
     environment:
