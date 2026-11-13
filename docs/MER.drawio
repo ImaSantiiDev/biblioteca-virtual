@@ -1,0 +1,238 @@
+<mxfile host="app.diagrams.net" agent="Biblioteca Virtual" version="24.7.7">
+  <diagram id="mer-biblioteca" name="MER Biblioteca Virtual">
+    <mxGraphModel dx="1420" dy="780" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1200" pageHeight="1200" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <!-- Título -->
+        <mxCell id="titulo" value="Modelo Entidad-Relación · Biblioteca Virtual" style="text;html=1;fontSize=16;fontStyle=1;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="360" y="0" width="480" height="30" as="geometry" />
+        </mxCell>
+
+        <!-- Entidades (rectángulos) -->
+        <mxCell id="ent_roles" value="ROLES" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;fontStyle=1;fontSize=13;" vertex="1" parent="1">
+          <mxGeometry x="640" y="60" width="140" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="ent_usuarios" value="USUARIOS" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;fontStyle=1;fontSize=13;" vertex="1" parent="1">
+          <mxGeometry x="640" y="310" width="140" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="ent_articulos" value="ARTICULOS" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;fontStyle=1;fontSize=13;" vertex="1" parent="1">
+          <mxGeometry x="640" y="690" width="140" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="ent_generos" value="GENEROS" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;fontStyle=1;fontSize=13;" vertex="1" parent="1">
+          <mxGeometry x="140" y="690" width="140" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="ent_autores" value="AUTORES" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;fontStyle=1;fontSize=13;" vertex="1" parent="1">
+          <mxGeometry x="140" y="990" width="140" height="50" as="geometry" />
+        </mxCell>
+
+        <!-- Relaciones (rombos) -->
+        <mxCell id="rel_tiene" value="tiene" style="rhombus;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="645" y="170" width="130" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="rel_solicita" value="solicita" style="rhombus;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="645" y="500" width="130" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="rel_clasifica" value="clasifica" style="rhombus;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="400" y="680" width="120" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="rel_escribe" value="escribe" style="rhombus;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="400" y="980" width="120" height="70" as="geometry" />
+        </mxCell>
+
+        <!-- Atributos: texto plano con flecha a su entidad o relación -->
+        <!-- ROLES -->
+        <mxCell id="a_id_rol" value="&lt;u&gt;id_rol&lt;/u&gt;" style="text;html=1;align=center;verticalAlign=middle;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="480" y="38" width="90" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="a_nombre_rol" value="nombre_rol" style="text;html=1;align=center;verticalAlign=middle;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="850" y="38" width="110" height="20" as="geometry" />
+        </mxCell>
+
+        <!-- USUARIOS -->
+        <mxCell id="a_id_usuario" value="&lt;u&gt;id_usuario&lt;/u&gt;" style="text;html=1;align=center;verticalAlign=middle;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="460" y="285" width="110" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="a_nombre_usuario" value="nombre_usuario" style="text;html=1;align=center;verticalAlign=middle;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="440" y="325" width="150" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="a_email" value="email" style="text;html=1;align=center;verticalAlign=middle;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="470" y="365" width="80" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="a_password_hash" value="password_hash" style="text;html=1;align=center;verticalAlign=middle;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="850" y="285" width="130" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="a_fecha_alta" value="fecha_alta" style="text;html=1;align=center;verticalAlign=middle;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="860" y="325" width="100" height="20" as="geometry" />
+        </mxCell>
+
+        <!-- Atributos propios de la relación solicita -->
+        <mxCell id="a_fecha_prestamo" value="fecha_prestamo" style="text;html=1;align=center;verticalAlign=middle;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="850" y="470" width="130" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="a_fecha_devolucion" value="fecha_devolucion" style="text;html=1;align=center;verticalAlign=middle;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="860" y="515" width="140" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="a_estado" value="estado" style="text;html=1;align=center;verticalAlign=middle;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="850" y="560" width="80" height="20" as="geometry" />
+        </mxCell>
+
+        <!-- ARTICULOS -->
+        <mxCell id="a_id_articulo" value="&lt;u&gt;id_articulo&lt;/u&gt;" style="text;html=1;align=center;verticalAlign=middle;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="850" y="670" width="110" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="a_titulo" value="titulo" style="text;html=1;align=center;verticalAlign=middle;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="860" y="710" width="70" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="a_descripcion" value="descripcion" style="text;html=1;align=center;verticalAlign=middle;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="850" y="750" width="120" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="a_imagen_url" value="imagen_url" style="text;html=1;align=center;verticalAlign=middle;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="450" y="560" width="120" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="a_disponible" value="disponible" style="text;html=1;align=center;verticalAlign=middle;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="470" y="625" width="110" height="20" as="geometry" />
+        </mxCell>
+
+        <!-- GENEROS -->
+        <mxCell id="a_id_genero" value="&lt;u&gt;id_genero&lt;/u&gt;" style="text;html=1;align=center;verticalAlign=middle;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="60" y="780" width="100" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="a_nombre_genero" value="nombre_genero" style="text;html=1;align=center;verticalAlign=middle;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="180" y="780" width="140" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="a_publico" value="publico" style="text;html=1;align=center;verticalAlign=middle;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="340" y="780" width="90" height="20" as="geometry" />
+        </mxCell>
+
+        <!-- AUTORES -->
+        <mxCell id="a_id_autor" value="&lt;u&gt;id_autor&lt;/u&gt;" style="text;html=1;align=center;verticalAlign=middle;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="60" y="1080" width="100" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="a_nombre_autor" value="nombre_autor" style="text;html=1;align=center;verticalAlign=middle;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="180" y="1080" width="130" height="20" as="geometry" />
+        </mxCell>
+
+        <!-- Cardinalidades -->
+        <mxCell id="c_tiene_1" value="1" style="text;html=1;fontSize=13;fontStyle=1;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="718" y="122" width="20" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="c_tiene_n" value="N" style="text;html=1;fontSize=13;fontStyle=1;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="718" y="262" width="20" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="c_solicita_n" value="N" style="text;html=1;fontSize=13;fontStyle=1;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="718" y="420" width="20" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="c_solicita_m" value="M" style="text;html=1;fontSize=13;fontStyle=1;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="718" y="615" width="20" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="c_clasifica_1" value="1" style="text;html=1;fontSize=13;fontStyle=1;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="300" y="688" width="20" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="c_clasifica_n" value="N" style="text;html=1;fontSize=13;fontStyle=1;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="545" y="688" width="20" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="c_escribe_1" value="1" style="text;html=1;fontSize=13;fontStyle=1;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="300" y="988" width="20" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="c_escribe_n" value="N" style="text;html=1;fontSize=13;fontStyle=1;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="700" y="745" width="20" height="20" as="geometry" />
+        </mxCell>
+
+        <!-- Leyenda -->
+        <mxCell id="leyenda" value="&lt;b&gt;Leyenda&lt;/b&gt;&lt;br&gt;Rectángulo: entidad&lt;br&gt;Texto con flecha: atributo&lt;br&gt;Rombo: relación&lt;br&gt;Subrayado: clave primaria&lt;br&gt;1, N, M: cardinalidad" style="text;html=1;align=left;verticalAlign=top;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="860" y="880" width="250" height="140" as="geometry" />
+        </mxCell>
+
+        <!-- Líneas entidad-relación -->
+        <mxCell id="e_roles_tiene" style="endArrow=none;html=1;strokeColor=#333333;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="ent_roles" target="rel_tiene">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_tiene_usuarios" style="endArrow=none;html=1;strokeColor=#333333;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="rel_tiene" target="ent_usuarios">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_usuarios_solicita" style="endArrow=none;html=1;strokeColor=#333333;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="ent_usuarios" target="rel_solicita">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_solicita_articulos" style="endArrow=none;html=1;strokeColor=#333333;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="rel_solicita" target="ent_articulos">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_generos_clasifica" style="endArrow=none;html=1;strokeColor=#333333;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="ent_generos" target="rel_clasifica">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_clasifica_articulos" style="endArrow=none;html=1;strokeColor=#333333;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="rel_clasifica" target="ent_articulos">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_autores_escribe" style="endArrow=none;html=1;strokeColor=#333333;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="ent_autores" target="rel_escribe">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_escribe_articulos" style="endArrow=none;html=1;strokeColor=#333333;exitX=1;exitY=0.5;entryX=0.35;entryY=1;" edge="1" parent="1" source="rel_escribe" target="ent_articulos">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- Flechas de los atributos -->
+        <mxCell id="ea_id_rol" style="endArrow=classic;html=1;strokeColor=#333333;" edge="1" parent="1" source="a_id_rol" target="ent_roles">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ea_nombre_rol" style="endArrow=classic;html=1;strokeColor=#333333;" edge="1" parent="1" source="a_nombre_rol" target="ent_roles">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ea_id_usuario" style="endArrow=classic;html=1;strokeColor=#333333;" edge="1" parent="1" source="a_id_usuario" target="ent_usuarios">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ea_nombre_usuario" style="endArrow=classic;html=1;strokeColor=#333333;" edge="1" parent="1" source="a_nombre_usuario" target="ent_usuarios">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ea_email" style="endArrow=classic;html=1;strokeColor=#333333;" edge="1" parent="1" source="a_email" target="ent_usuarios">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ea_password_hash" style="endArrow=classic;html=1;strokeColor=#333333;" edge="1" parent="1" source="a_password_hash" target="ent_usuarios">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ea_fecha_alta" style="endArrow=classic;html=1;strokeColor=#333333;" edge="1" parent="1" source="a_fecha_alta" target="ent_usuarios">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ea_fecha_prestamo" style="endArrow=classic;html=1;strokeColor=#333333;" edge="1" parent="1" source="a_fecha_prestamo" target="rel_solicita">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ea_fecha_devolucion" style="endArrow=classic;html=1;strokeColor=#333333;" edge="1" parent="1" source="a_fecha_devolucion" target="rel_solicita">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ea_estado" style="endArrow=classic;html=1;strokeColor=#333333;" edge="1" parent="1" source="a_estado" target="rel_solicita">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ea_id_articulo" style="endArrow=classic;html=1;strokeColor=#333333;" edge="1" parent="1" source="a_id_articulo" target="ent_articulos">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ea_titulo" style="endArrow=classic;html=1;strokeColor=#333333;" edge="1" parent="1" source="a_titulo" target="ent_articulos">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ea_descripcion" style="endArrow=classic;html=1;strokeColor=#333333;" edge="1" parent="1" source="a_descripcion" target="ent_articulos">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ea_imagen_url" style="endArrow=classic;html=1;strokeColor=#333333;" edge="1" parent="1" source="a_imagen_url" target="ent_articulos">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ea_disponible" style="endArrow=classic;html=1;strokeColor=#333333;" edge="1" parent="1" source="a_disponible" target="ent_articulos">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ea_id_genero" style="endArrow=classic;html=1;strokeColor=#333333;" edge="1" parent="1" source="a_id_genero" target="ent_generos">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ea_nombre_genero" style="endArrow=classic;html=1;strokeColor=#333333;" edge="1" parent="1" source="a_nombre_genero" target="ent_generos">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ea_publico" style="endArrow=classic;html=1;strokeColor=#333333;" edge="1" parent="1" source="a_publico" target="ent_generos">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ea_id_autor" style="endArrow=classic;html=1;strokeColor=#333333;" edge="1" parent="1" source="a_id_autor" target="ent_autores">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ea_nombre_autor" style="endArrow=classic;html=1;strokeColor=#333333;" edge="1" parent="1" source="a_nombre_autor" target="ent_autores">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

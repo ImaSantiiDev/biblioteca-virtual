@@ -1,0 +1,48 @@
+
+services:
+  app:
+    build: .
+    container_name: biblioteca_app
+    ports:
+      - "8080:80"
+    volumes:
+      - ./api:/var/www/html/api
+      - ./front:/var/www/html/front
+      - ./.htaccess:/var/www/html/.htaccess
+    env_file:
+      - .env
+    depends_on:
+      db:
+        condition: service_healthy
+
+  db:
+    image: mysql:8.0
+    container_name: biblioteca_db
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+      MYSQL_DATABASE: ${DB_NAME}
+      MYSQL_USER: ${DB_USER}
+      MYSQL_PASSWORD: ${DB_PASSWORD}
+    volumes:
+      - datos_mysql:/var/lib/mysql
+      - ./api/config/init.sql:/docker-entrypoint-initdb.d/init.sql:ro
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost"]
+      interval: 5s
+      timeout: 5s
+      retries: 12
+
+  phpmyadmin:
+    image: phpmyadmin:5
+    container_name: biblioteca_phpmyadmin
+    ports:
+      - "8081:80"
+    environment:
+      PMA_HOST: db
+      PMA_PORT: 3306
+    depends_on:
+      - db
+
+volumes:
+  datos_mysql:

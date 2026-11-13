@@ -1,0 +1,21 @@
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+
+    RewriteRule ^$ front/index.html [L]
+    RewriteRule ^index\.html$ front/index.html [L]
+
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteRule ^api(/.*)?$ api/index.php [QSA,L]
+
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule ^dist/(.*)$ front/dist/$1 [L]
+
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule ^paginas/(.*)$ front/dist/paginas/$1 [L]
+</IfModule>
+
+<FilesMatch "^\.env|\.sql$">
+    Require all denied
+</FilesMatch>

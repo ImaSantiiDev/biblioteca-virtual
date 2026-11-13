@@ -1,0 +1,19 @@
+@media (max-width: 768px) {
+    .hero-section {
+        height: 55vh;
+        border-radius: 0 0 0 0;
+    }
+    .hero-section h1 {
+        font-size: 2rem;
+    }
+    .hero-section p {
+        font-size: 1rem;
+    }
+    .contenedor-foto {
+        height: 280px;
+    }
+    .btn-filtro {
+        padding: 6px 18px;
+        font-size: 0.9rem;
+    }
+}
